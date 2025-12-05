@@ -76,18 +76,15 @@
 
         </div>
     </section>
+    script src="js/jQuery.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.slider-img').forEach(function (el) {
-                el.addEventListener('click', function () {
-                    document.querySelectorAll('.slider-img.active').forEach(function (a) {
-                        a.classList.remove('active');
-                    });
-                    el.classList.add('active');
-                });
+        jQuery(document).ready(function ($) {
+            $(".slider-img").on("click", function () {
+                $(".slider-img").removeClass("active");
+                $(this).addClass("active");
             });
         });
     </script>
-  </body>
+</body>
 </html>
 
