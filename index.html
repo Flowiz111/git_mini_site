@@ -76,6 +76,18 @@
 
         </div>
     </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.slider-img').forEach(function (el) {
+                el.addEventListener('click', function () {
+                    document.querySelectorAll('.slider-img.active').forEach(function (a) {
+                        a.classList.remove('active');
+                    });
+                    el.classList.add('active');
+                });
+            });
+        });
+    </script>
   </body>
 </html>
 
